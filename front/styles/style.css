@@ -1,0 +1,68 @@
+h1 {
+    color: red;
+}
+
+.screen-container { /* Container da tela toda */
+    position: fixed;
+    
+    padding:0;
+    margin:0;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    
+    background-color: aqua;
+}
+
+.menu{ /* Menu lateral */
+    background-color: blueviolet;
+    width: 20%;
+}
+
+.chat { /* conteudo do chat */
+    background-color: blue;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.chat1 {
+    display: flex;
+    flex-direction: column;
+    height: 10%;
+    width: 100%;
+    background-color: azure;
+}
+
+.conteudo{
+    width: 98%;
+    height: 6%;
+    border-radius: 5px;
+    margin: 1%;
+
+    background-color: aquamarine;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    font-size: medium;
+}
+
+.input {
+    
+    width: 96%;
+    margin-left: 1%;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 5px;
+    word-wrap: break-word;
+}
