@@ -18,10 +18,24 @@ h1 {
     background-color: aqua;
 }
 
-.menu{ /* Menu lateral */
+/* Menu lateral */
+.menu{ 
+    margin-left: -20%; /* cuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu */
+    display: flex;
+    flex-direction: column;
     background-color: blueviolet;
+    justify-content: space-between;
     width: 20%;
 }
+
+.menu1 {
+    background-color: brown;
+}
+
+.menu2 {
+    background-color: cadetblue;
+}
+/* fim Menu lateral */
 
 .chat { /* conteudo do chat */
     background-color: blue;
@@ -36,11 +50,34 @@ h1 {
 
 .chat1 {
     display: flex;
-    flex-direction: column;
+    flex-direction:row;
     height: 10%;
     width: 100%;
     background-color: azure;
+    justify-content: space-between;    
 }
+
+.tbutton {
+    
+}
+
+.titulo-chat {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 50%;
+    margin-left: 5%;
+
+    background-color: aqua;
+}
+
+.menuzin {
+    text-align: center;
+    width: 10%;
+    background-color: red;
+}
+
+/* BARRA DE CHAT */
 
 .conteudo{
     width: 98%;
@@ -58,11 +95,22 @@ h1 {
 }
 
 .input {
-    
     width: 96%;
     margin-left: 1%;
+    margin-right: 1%;
     border: none;
     background-color: rgba(0, 0, 0, 0);
     border-radius: 5px;
     word-wrap: break-word;
+    font-size: larger;
 }
+ 
+.input:focus { 
+    outline: none;
+}
+
+.send {
+    margin-right: 1%;
+}
+
+/* FIM BARRA DE CHAT */
