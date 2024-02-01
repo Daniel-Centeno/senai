@@ -8,7 +8,7 @@ function toggleDropdown() {
 // }
 
 // Side bar button logic
-let toggled;
+let toggled = true;
 $(document).ready(function() {
     $('#tbutton').on('click', function() {
         if (toggled) {
