@@ -127,33 +127,34 @@
     <div class="screen-container">
 
         <!-- sidebar -->
-        <div class="menu" id="sidebar">
+        <aside class="menu" id="sidebar">
             <div class="menu1">
                 <p>menu1</p>
                 <p>user</p>
                 <img src="" alt="icon">
                 <p>menu</p>
             </div>
-            <div class="menu2">
-                <p>menu2</p>
-                <!-- Button to trigger the dialog -->
-                <button onclick="showDialog2()">Open Dialog</button>
-                <div id="myModal2">
-                    <p>This is a simple pop-up dialog!</p>
-                    <button onclick="closeDialog2()">Close</button>
+            <div>
+                <div class="menu2">
+                    <p>menu2</p>
+                    <!-- Button to trigger the dialog -->
+                    <button onclick="showDialog2()">Open Dialog</button>
+                    <div id="myModal2">
+                        <p>This is a simple pop-up dialog!</p>
+                        <button onclick="closeDialog2()">Close</button>
+                    </div>
+
+                    <!-- Overlay to cover the background when the dialog is open -->
+                    <div id="overlay2"></div>   
                 </div>
-
-                <!-- Overlay to cover the background when the dialog is open -->
-                <div id="overlay2"></div>   
             </div>
-        </div>
-
+        </aside>
         <!-- div relacionada ao chat -->
-        <div class="chat">
+        <main class="chat">
+            
             <!-- barra superior do chat -->
-
             <div class="chat1">
-                <button class="tbutton" id="tbutton">penes</button>
+                <button class="tbutton" id="tbutton" onclick="Animated()">:3</button>
                 <div class="titulo-chat">
                     <h1>nome do chat</h1>
                 </div>
@@ -175,12 +176,20 @@
                 </div>
             </div>
 
-            <!-- barra de input de texto -->
-            <div class="conteudo">
-                <input type="text" class="input" name="nomex:menssagen">
-                <img class="send" src="/front/img/send-icon.png.png" height="50%">
+            <!-- example BACKGROUND -->
+            <div>
+                <img src="/front/img/back.jfif" alt="" id="background">
+            
+                <!-- barra de input de texto -->
+                <form class="conteudo">
+                    <input type="text" class="input" name="nomex:menssagen">
+                    <button type="submit" id="send-button" value="submit">
+                        <img id="send-image" src="/front/img/send-icon.png.png">
+                    </button>
+                </form>
+
             </div>
-        </div>
+        </main>
     </div>
 
 

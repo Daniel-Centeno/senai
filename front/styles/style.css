@@ -26,7 +26,54 @@ h1 {
     background-color: blueviolet;
     justify-content: space-between;
     width: 20%;
+
+/* ARCOOO IRIOOOOOOO AAAAAAAAAAAAAAAAAAAHSDAHSGDOsadLAISGDyasgd9ashdSADasdASDsyiagdçIA*/
+animation: 10s infinite alternate colorShift;
+
 }
+
+@keyframes colorShift {
+    0% {
+    	background-color: #ff2400, 
+    }
+
+    15% {
+        background-color: #e81d1d;
+    }
+    30% {
+        background-color: #e8b71d;
+    }
+    45% {
+        background-color: #e3e81d;
+    }
+    60% {
+        background-color: #1de840;
+    }
+    75% {
+    	background-color: #1ddde8;
+    }
+    60% {
+    	background-color: #2b1de8;
+    }
+    90% {
+    	background-color: #dd00f3;
+    }
+    
+
+}
+
+.animation {
+    animation: slideAnimation 2s ease-in-out;
+}
+
+@keyframes slideAnimation {
+    from {
+        margin-left: -20vw;
+    }
+    to {
+        margin-left: 0vw;
+    }
+  }
 
 .menu1 {
     background-color: brown;
@@ -76,12 +123,17 @@ h1 {
 /* BARRA DE CHAT */
 
 .conteudo{
+    position: relative;
+    bottom: 13%;
     width: 98%;
     height: 6%;
     border-radius: 5px;
     margin: 1%;
 
-    background-color: aquamarine;
+    background: 
+   linear-gradient(rgba(255,0,0,1) 0%, rgba(255,154,0,1) 10%, rgba(208,222,33,1) 20%, rgba(79,220,74,1) 30%, rgba(63,218,216,1) 40%, rgba(47,201,226,1) 50%, rgba(28,127,238,1) 60%, rgba(95,21,242,1) 70%, rgba(186,12,248,1) 80%, rgba(251,7,217,1) 90%, rgba(255,0,0,1) 100%) 
+   0 0/100% 200%;
+   animation: a 2s linear infinite;
 
     display: flex;
     flex-direction: row;
@@ -89,6 +141,10 @@ h1 {
 
     font-size: medium;
 }
+
+@keyframes a {
+    to {background-position:0 -200%}
+  }
 
 .input {
     width: 96%;
@@ -110,3 +166,57 @@ h1 {
 }
 
 /* FIM BARRA DE CHAT */
+
+/* barra de texto (botão de enviar) */
+#send-button {
+    height: 100%;
+    width: 5%;
+}
+
+#send-image {
+    width: 60%;
+}
+
+/*  BOOOOOTOOOOOOEEEEEEESSSSS AAAAAAAAAAAAAA */
+button {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+}
+
+#background {
+    height: 100%;
+    width: 100%;
+    object-fit:cover;
+
+}
+
+
+
+
+.menu2 {
+    display: flex;
+    flex-direction: row;
+}
+
+
+/*  RAINBOWW */
+@-webkit-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-moz-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-o-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@keyframes rainbow { 
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
