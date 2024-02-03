@@ -124,22 +124,23 @@ animation: 10s infinite alternate colorShift;
 
 .conteudo{
     position: relative;
-    bottom: 13%;
+    bottom: 27.5%;
     width: 98%;
     height: 6%;
     border-radius: 5px;
     margin: 1%;
 
     background: 
-   linear-gradient(rgba(255,0,0,1) 0%, rgba(255,154,0,1) 10%, rgba(208,222,33,1) 20%, rgba(79,220,74,1) 30%, rgba(63,218,216,1) 40%, rgba(47,201,226,1) 50%, rgba(28,127,238,1) 60%, rgba(95,21,242,1) 70%, rgba(186,12,248,1) 80%, rgba(251,7,217,1) 90%, rgba(255,0,0,1) 100%) 
-   0 0/100% 200%;
-   animation: a 2s linear infinite;
+    linear-gradient(rgba(255,0,0,1) 0%, rgba(255,154,0,1) 10%, rgba(208,222,33,1) 20%, rgba(79,220,74,1) 30%, rgba(63,218,216,1) 40%, rgba(47,201,226,1) 50%, rgba(28,127,238,1) 60%, rgba(95,21,242,1) 70%, rgba(186,12,248,1) 80%, rgba(251,7,217,1) 90%, rgba(255,0,0,1) 100%) 
+    0 0/100% 200%;
+    animation: a 2s linear infinite;
 
     display: flex;
     flex-direction: row;
     align-items: center;
 
     font-size: medium;
+    z-index: 10;
 }
 
 @keyframes a {
@@ -186,8 +187,8 @@ button {
 #background {
     height: 100%;
     width: 100%;
-    object-fit:cover;
-
+    object-fit:cover; 
+    overflow: hidden;
 }
 
 
@@ -219,4 +220,11 @@ button {
     0%{background-position:0% 82%}
     50%{background-position:100% 19%}
     100%{background-position:0% 82%}
+}
+
+
+
+
+.chat-area {
+    width: 100%;
 }
