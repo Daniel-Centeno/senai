@@ -26,10 +26,56 @@ h1 {
     background-color: blueviolet;
     justify-content: space-between;
     width: 20%;
+    transition: transform 0.5s ease-in-out;
 
 /* ARCOOO IRIOOOOOOO AAAAAAAAAAAAAAAAAAAHSDAHSGDOsadLAISGDyasgd9ashdSADasdASDsyiagdçIA*/
 animation: 10s infinite alternate colorShift;
+animation: moveLeft 0.5s ease-in-out;
+}
 
+.menu.toggled {
+    /* transform: translateX(-20vw); */
+    animation: moveRight 0.5s ease-in-out;
+}
+
+.conteudo.toggled{
+    animation: right 0.5s ease-in-out;
+}
+
+@keyframes left {
+    from {
+        bottom: 41%;
+    }
+    to {
+        bottom: 27.5%;
+    }
+}
+
+@keyframes right {
+    from {
+        bottom: 27.5%;
+    }
+    to {
+        bottom: 41%;
+    }
+}
+
+@keyframes moveRight {
+    from {
+        margin-left: 0;
+    }
+    to {
+        margin-left: -20vw;
+    }
+}
+
+@keyframes moveLeft {
+    from {
+        margin-left: -20vw;
+    }
+    to {
+        margin-left: 0;
+    }
 }
 
 @keyframes colorShift {
@@ -141,6 +187,8 @@ animation: 10s infinite alternate colorShift;
 
     font-size: medium;
     z-index: 10;
+
+    animation: left 0.5s ease-in-out;
 }
 
 @keyframes a {

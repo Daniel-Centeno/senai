@@ -24,6 +24,13 @@ $(document).ready(function() {
     });
 });
 
+document.getElementById('tbutton').addEventListener('click', function () {
+    const animatedElement = document.querySelector('.menu');
+    const animatedElement1 = document.querySelector('.conteudo');
+    animatedElement.classList.toggle('toggled');
+    animatedElement1.classList.toggle('toggled');
+});
+
 function Pop() {
     alert("clicou");
 }
