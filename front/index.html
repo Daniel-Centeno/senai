@@ -81,6 +81,16 @@
             padding: 20px;
             background-color: #fff;
             z-index: 1000;
+            animation: show 2s ease-in-out;
+        }
+
+        @keyframes show {
+            from {
+                transform: rotate(0);
+            }
+            to {
+                transform: rotate(360deg);
+            }
         }
 
         /* Style for the overlay background */
