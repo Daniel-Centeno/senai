@@ -13,11 +13,11 @@ $(document).ready(function() {
     $('#tbutton').on('click', function() {
         if (toggled) {
             $('#sidebar').css('margin-left', '-20vw');
-            $('.conteudo').css('bottom', '41%');
+            $('.conteudo').css('bottom', '34%');
             toggled = false;
         } else {
             $('#sidebar').css('margin-left', '0vw');
-            $('.conteudo').css('bottom', '27.5%');
+            $('.conteudo').css('bottom', '19%');
             toggled = true;
         }
         

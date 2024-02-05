@@ -44,19 +44,19 @@ animation: moveLeft 0.5s ease-in-out;
 
 @keyframes left {
     from {
-        bottom: 41%;
+        bottom: 34%;
     }
     to {
-        bottom: 27.5%;
+        bottom: 19%;
     }
 }
 
 @keyframes right {
     from {
-        bottom: 27.5%;
+        bottom: 19%;
     }
     to {
-        bottom: 41%;
+        bottom: 34%;
     }
 }
 
@@ -170,7 +170,7 @@ animation: moveLeft 0.5s ease-in-out;
 
 .conteudo{
     position: relative;
-    bottom: 27.5%;
+    
     width: 98%;
     height: 6%;
     border-radius: 5px;
