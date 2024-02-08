@@ -13,11 +13,15 @@ $(document).ready(function() {
     $('#tbutton').on('click', function() {
         if (toggled) {
             $('#sidebar').css('margin-left', '-20vw');
-            $('.conteudo').css('bottom', '34%');
+            $('.conteudo').css('bottom', '100%');
+            $('#tbutton').css('transform', 'scaleX(1)');
+            $('.messages').css('height', '58.5%');
             toggled = false;
         } else {
             $('#sidebar').css('margin-left', '0vw');
-            $('.conteudo').css('bottom', '19%');
+            $('.conteudo').css('bottom', '100%');
+            $('#tbutton').css('transform', 'scaleX(-1)');
+            $('.messages').css('height', '71%');
             toggled = true;
         }
         

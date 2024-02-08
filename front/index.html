@@ -81,15 +81,15 @@
             padding: 20px;
             background-color: #fff;
             z-index: 1000;
-            animation: show 2s ease-in-out;
+            animation: show2 0.5s ease-in-out;
         }
 
-        @keyframes show {
+        @keyframes show2 {
             from {
-                transform: rotate(0);
+                left: 130%;
             }
             to {
-                transform: rotate(360deg);
+                left: 90%;
             }
         }
 
@@ -110,12 +110,24 @@
             display: none;
             position: fixed;
             top: 50%;
-            left: 10%;
+            left: 30%;
+            right: auto;
             transform: translate(-50%, -50%);
             border: 1px solid #ccc;
             padding: 20px;
             background-color: #fff;
             z-index: 1000;
+            animation: show 0.5s ease-in-out;
+        }
+
+        
+        @keyframes show {
+            from {
+                left: -30%;
+            }
+            to {
+                left: 30%;
+            }
         }
 
         /* Style for the overlay background */
@@ -139,16 +151,16 @@
         <!-- sidebar -->
         <aside class="menu" id="sidebar">
             <div class="menu1">
-                <p>menu1</p>
-                <p>user</p>
-                <img src="" alt="icon">
-                <p>menu</p>
+                <p>chat1</p>
+                <p>chat2</p>
+                <!-- <img src="" alt="icon"> -->
+                <p>chat3</p>
             </div>
             <div>
                 <div class="menu2">
-                    <p>menu2</p>
+                    <p>perfil</p>
                     <!-- Button to trigger the dialog -->
-                    <button onclick="showDialog2()">Open Dialog</button>
+                    <button onclick="showDialog2()"><img src="img/config.webp" alt="" height="20vh"></button>
                     <div id="myModal2">
                         <p>This is a simple pop-up dialog!</p>
                         <button onclick="closeDialog2()">Close</button>
@@ -156,6 +168,7 @@
 
                     <!-- Overlay to cover the background when the dialog is open -->
                     <div id="overlay2"></div>
+                    
                 </div>
             </div>
         </aside>
@@ -164,16 +177,16 @@
 
             <!-- barra superior do chat -->
             <div class="chat1">
-                <button class="tbutton" id="tbutton" onclick="Toggled()">:3</button>
+                <button class="tbutton" id="tbutton" onclick="Toggled()"><img src="img/arrow.png" alt="" height="19vh"></button>
                 <div class="titulo-chat">
-                    <h1>nome do chat</h1>
+                    <h1>Alexandre dos santos da Silva da Conceiçãoh</h1>
                 </div>
 
                 <div class="menuzin">
                     <nav>
                         <div class="dropdown">
                             <!-- Button to trigger the dialog -->
-                            <button onclick="showDialog()">Open Dialog</button>
+                            <button onclick="showDialog()"><img src="img/info.png" alt="" height="20vh"></button>
                             <div id="myModal">
                                 <p>This is a simple pop-up dialog!</p>
                                 <button onclick="closeDialog()">Close</button>
@@ -188,11 +201,16 @@
 
             <!-- example BACKGROUND -->
             <div class="chat-area">
-                <img src="/front/img/back.jfif" alt="bask" id="background">
+                <img src="/front/img/landscape.jfif" alt="bask" id="background">
 
                 <!-- barra de input de texto -->
+                <div class="messages">
+                    <p>mensagens</p>
+                    <p></p>
+                </div>
+                
                 <form class="conteudo">
-                    <input type="text" class="input" name="nomex:menssagen">
+                    <input type="text" class="input" name="nomex:menssagen" autocomplete="off">
                     <button type="submit" id="send-button" value="submit">
                         <img id="send-image" src="/front/img/send-icon.png.png">
                     </button>

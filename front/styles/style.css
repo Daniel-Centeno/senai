@@ -1,7 +1,3 @@
-h1 {
-    color: red;
-}
-
 .screen-container { /* Container da tela toda */
     position: fixed;
     
@@ -23,7 +19,7 @@ h1 {
      /* cuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu */
     display: flex;
     flex-direction: column;
-    background-color: blueviolet;
+    background-color: rgb(220, 235, 235);
     justify-content: space-between;
     width: 20%;
     transition: transform 0.5s ease-in-out;
@@ -38,25 +34,38 @@ animation: moveLeft 0.5s ease-in-out;
     animation: moveRight 0.5s ease-in-out;
 }
 
-.conteudo.toggled{
+.menu1 {
+    background-color: azure;
+}
+
+.menu2 {
+    padding-left: 5%;
+    padding-right: 2%;
+    display: flex;
+    flex-direction: row;
+    background-color: azure;
+    justify-content: space-between;
+}
+
+.messages.toggled{
     animation: right 0.5s ease-in-out;
 }
 
 @keyframes left {
     from {
-        bottom: 34%;
+        height: 71%;
     }
     to {
-        bottom: 19%;
+        height: 58.5%;
     }
 }
 
 @keyframes right {
     from {
-        bottom: 19%;
+        height: 58.5%;
     }
     to {
-        bottom: 34%;
+        height: 71%;
     }
 }
 
@@ -120,14 +129,6 @@ animation: moveLeft 0.5s ease-in-out;
         margin-left: 0vw;
     }
   }
-
-.menu1 {
-    background-color: brown;
-}
-
-.menu2 {
-    background-color: cadetblue;
-}
 /* fim Menu lateral */
 
 .chat { /* conteudo do chat */
@@ -144,26 +145,28 @@ animation: moveLeft 0.5s ease-in-out;
 .chat1 {
     display: flex;
     flex-direction:row;
-    height: 10%;
+    height: 8%;
     width: 100%;
     background-color: azure;
-    justify-content: space-between;    
+    justify-content: space-between; 
 }
 
 .titulo-chat {
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 50%;
+    width: 90%;
+    text-align: center;
     margin-left: 5%;
-
-    background-color: aqua;
+    font-size: small;
 }
 
 .menuzin {
     text-align: center;
-    width: 10%;
-    background-color: red;
+    width: 4%;
+
+    display: grid;
+    align-items: center;
 }
 
 /* BARRA DE CHAT */
@@ -173,13 +176,14 @@ animation: moveLeft 0.5s ease-in-out;
     
     width: 98%;
     height: 6%;
-    border-radius: 5px;
+    border-radius: 10px;
     margin: 1%;
 
-    background: 
+    /* background: 
     linear-gradient(rgba(255,0,0,1) 0%, rgba(255,154,0,1) 10%, rgba(208,222,33,1) 20%, rgba(79,220,74,1) 30%, rgba(63,218,216,1) 40%, rgba(47,201,226,1) 50%, rgba(28,127,238,1) 60%, rgba(95,21,242,1) 70%, rgba(186,12,248,1) 80%, rgba(251,7,217,1) 90%, rgba(255,0,0,1) 100%) 
     0 0/100% 200%;
-    animation: a 2s linear infinite;
+    animation: a 2s linear infinite; */
+    background-color: azure;
 
     display: flex;
     flex-direction: row;
@@ -189,6 +193,12 @@ animation: moveLeft 0.5s ease-in-out;
     z-index: 10;
 
     animation: left 0.5s ease-in-out;
+    bottom: 100%;
+    
+    /*
+    border-style: solid;
+    border-color: #2b1de8;
+    */
 }
 
 @keyframes a {
@@ -240,14 +250,6 @@ button {
 }
 
 
-
-
-.menu2 {
-    display: flex;
-    flex-direction: row;
-}
-
-
 /*  RAINBOWW */
 @-webkit-keyframes rainbow {
     0%{background-position:0% 82%}
@@ -275,4 +277,20 @@ button {
 
 .chat-area {
     width: 100%;
+}
+
+.tbutton {
+    transform: scaleX(-1);
+}
+
+.messages {
+    margin-top: 1%;
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 71%;
+    z-index: 99999999999999;
+    top: -100%;
+    background-color: #e81d1d;
+    animation: left 0.5s ease-in-out;
 }
