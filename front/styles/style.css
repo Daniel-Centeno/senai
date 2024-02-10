@@ -48,24 +48,24 @@ animation: moveLeft 0.5s ease-in-out;
 }
 
 .messages.toggled{
-    animation: right 0.5s ease-in-out;
+    animation: right 2s ease-in-out;
 }
 
 @keyframes left {
     from {
-        height: 71%;
+        height: 58.5%;
     }
     to {
-        height: 58.5%;
+        height: 71%;
     }
 }
 
 @keyframes right {
     from {
-        height: 58.5%;
+        height: 71%;
     }
     to {
-        height: 71%;
+        height: 58.5%;
     }
 }
 
@@ -192,7 +192,7 @@ animation: moveLeft 0.5s ease-in-out;
     font-size: medium;
     z-index: 10;
 
-    animation: left 0.5s ease-in-out;
+    animation: left 2s ease-in-out;
     bottom: 100%;
     
     /*
