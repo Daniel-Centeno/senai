@@ -199,24 +199,37 @@
                 </div>
             </div>
 
-            <!-- example BACKGROUND -->
-            <div class="chat-area">
-                <img src="/front/img/landscape.jfif" alt="bask" id="background">
-
                 <!-- barra de input de texto -->
-                <div class="messages">
+                <div class="messages" id="messageArea">
                     <p>mensagens</p>
                     <p></p>
+                    <p>Hover This</p>
+                    <ul>
+                    <li>Coffee</li>
+                    <li>Tea</li>
+                    <li>Milk</li>
+                    </ul>
+
+                    <style>
+                        ul {
+                            background-color: #eee;
+                            transform: scaleY(0);    
+                            transform-origin: top;
+                            transition: transform 0.26s ease;
+                            }
+                        p:hover ~ ul {
+                            transform: scaleY(1);
+                        }
+                    </style>
                 </div>
                 
                 <form class="conteudo">
-                    <input type="text" class="input" name="nomex:menssagen" autocomplete="off">
-                    <button type="submit" id="send-button" value="submit">
+                    <!-- name="nomex:menssagen" -->
+                    <input id="messageInput" type="text" class="input" autocomplete="off" placeholder="digite aqui...">
+                    <button id="sendMessage">
                         <img id="send-image" src="/front/img/send-icon.png.png">
                     </button>
                 </form>
-
-            </div>
         </main>
     </div>
 
