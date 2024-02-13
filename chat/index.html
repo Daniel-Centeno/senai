@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Chat</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        nav {
+            overflow: hidden;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown.active .dropdown-content {
+            display: block;
+        }
+    </style>
+    <style>
+        /* Style for the dialog */
+        #myModal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 90%;
+            transform: translate(-50%, -50%);
+            border: 1px solid #ccc;
+            padding: 20px;
+            background-color: #fff;
+            z-index: 1000;
+            animation: show2 0.5s ease-in-out;
+        }
+
+        @keyframes show2 {
+            from {
+                left: 130%;
+            }
+            to {
+                left: 90%;
+            }
+        }
+
+        /* Style for the overlay background */
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+
+        /* Style for the dialog */
+        #myModal2 {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 30%;
+            right: auto;
+            transform: translate(-50%, -50%);
+            border: 1px solid #ccc;
+            padding: 20px;
+            background-color: #fff;
+            z-index: 1000;
+            animation: show 0.5s ease-in-out;
+        }
+
+        
+        @keyframes show {
+            from {
+                left: -30%;
+            }
+            to {
+                left: 30%;
+            }
+        }
+
+        /* Style for the overlay background */
+        #overlay2 {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="titulo-chat" style="display: flex; flex-direction: row; height: 10%; align-items: center;">
+            <button id="toggleSidebar"> > </button>
+            <h1>Alexandre dos santos da Silva da Conceiçãoh</h1>
+            <button> ... </button>
+        </div>
+        <div class="chat">
+            <div id="messageArea" class="message-area">
+                <!-- Messages will be dynamically added here -->
+            </div>
+            <div class="input-area">
+                <div class="input-bar">
+                    <input type="text" id="messageInput" placeholder="Type your message..."  autofocus>
+                    <button id="sendMessage">&#x21AA;</button>
+                    <script>
+                        document.getElementById("messageInput").addEventListener("keyup", function(event) {
+                          // Check if the pressed key is Enter (key code 13)
+                          if (event.keyCode === 13) {
+                            // Trigger a click event on the button
+                            document.getElementById("sendMessage").click();
+                          }
+                        });
+                    </script>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- sidebar -->
+    <aside id="sidebar" class="sidebar">
+        <div class="menu1">
+            <p>chat1</p>
+            <p>chat2</p>
+            <!-- <img src="" alt="icon"> -->
+            <p>chat3</p>
+        </div>
+        <div class="menu2">
+            <p>perfil</p>
+            <!-- Button to trigger the dialog -->
+            <button onclick="showDialog2()">&#9881;</button>
+                    <div id="myModal2">
+                        <p>grupos (criar/entrar)</p>
+                        <button onclick="closeDialog2()">Close</button>
+                        <p>Nome</p>
+                        <p>Foto (se tiver)</p>
+                    </div>
+            <!-- Overlay to cover the background when the dialog is open -->
+            <div id="overlay2"></div>
+        </div>
+    </aside>
+
+    <script src="script.js"></script>
+
+    <script>
+        function showDialog() {
+            var modal = document.getElementById('myModal');
+            var overlay = document.getElementById('overlay');
+            modal.style.display = 'block';
+            overlay.style.display = 'block';
+        }
+
+        function closeDialog() {
+            var modal = document.getElementById('myModal');
+            var overlay = document.getElementById('overlay');
+            modal.style.display = 'none';
+            overlay.style.display = 'none';
+        }
+
+        function showDialog2() {
+            var modal = document.getElementById('myModal2');
+            var overlay = document.getElementById('overlay2');
+            modal.style.display = 'block';
+            overlay.style.display = 'block';
+        }
+
+        function closeDialog2() {
+            var modal = document.getElementById('myModal2');
+            var overlay = document.getElementById('overlay2');
+            modal.style.display = 'none';
+            overlay.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
