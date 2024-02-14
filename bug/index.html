@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bug Report Page</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .container {
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">Report a Bug</div>
+        <div class="card-body">
+          <form id="bugReportForm">
+            <div class="form-group">
+              <label for="bugTitle">Bug Title</label>
+              <input type="text" class="form-control" id="bugTitle" name="bugTitle" required>
+            </div>
+            <div class="form-group">
+              <label for="bugDescription">Bug Description</label>
+              <textarea class="form-control" id="bugDescription" name="bugDescription" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.getElementById("bugReportForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // prevent the form from submitting
+    // You can add your bug report logic here
+    var formData = new FormData(this);
+    // For simplicity, just logging the form data for demonstration
+    for (var pair of formData.entries()) {
+      console.log(pair[0] + ': ' + pair[1]);
+    }
+    // Here, you can add your own logic to handle the bug report, such as sending the data to a server
+  });
+</script>
+
+</body>
+</html>
