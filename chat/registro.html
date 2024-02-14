@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Page</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .container {
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">Register</div>
+        <div class="card-body">
+          <form id="registerForm">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+              <label for="cargo">Cargo</label>
+              <select class="form-control" id="cargo" name="cargo" required>
+                <option value="">Select Cargo</option>
+                <option value="aluno">Aluno</option>
+                <option value="professor">Professor</option>
+                <option value="coordenador">Coordenador</option>
+              </select>
+            </div>
+            <div class="form-group" id="classeGroup" style="display: none;">
+              <label for="classe">Classe</label>
+              <select class="form-control" id="classe" name="classe">
+                <option value="">Select Classe</option>
+                <option value="C# - noturno">C# - Noturno</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Register</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.getElementById("cargo").addEventListener("change", function() {
+    var selectedCargo = this.value;
+    var classeGroup = document.getElementById("classeGroup");
+    if (selectedCargo === "aluno") {
+      classeGroup.style.display = "block";
+    } else {
+      classeGroup.style.display = "none";
+    }
+  });
+
+  document.getElementById("registerForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // prevent the form from submitting
+    // You can add your registration logic here
+    var formData = new FormData(this);
+    // For simplicity, just logging the form data for demonstration
+    for (var pair of formData.entries()) {
+      console.log(pair[0] + ': ' + pair[1]);
+    }
+    // Here, you can add your own logic to handle registration, such as sending the data to a server
+  });
+</script>
+
+</body>
+</html>

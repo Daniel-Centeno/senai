@@ -6,6 +6,12 @@ body {
     height: 100vh; /* Make body full height */
 }
 
+button {
+    background: none;
+    outline: none;
+    border: none;
+}
+
 .container {
     height: 100%;
     background-color: rgb(168, 165, 231);
@@ -36,6 +42,9 @@ body {
     /* border-style: dashed;
     border-color: black; */
     text-align:left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* HEADER */
@@ -75,11 +84,10 @@ body {
 
 .input-bar {
     border-radius: 10px; 
-    background-color:#3ad4f0;
+    background-color:#5124cc;
     width: 100%; 
     padding: 10px; display: flex; 
     justify-content: space-between;
-
 }
 
 #messageInput {
@@ -88,6 +96,7 @@ body {
     background-color: rgba(0, 0, 0, 0);
     border: none;
     outline: none;
+    color: black;
 }
 
 #messageInput:focus {
@@ -135,6 +144,7 @@ body {
 
 .menu1 {
     background-color: rgb(168, 165, 231);
+    overflow-y: auto;
 }
 
 
@@ -149,9 +159,11 @@ body {
     align-items: center;
 }
 
-.menu2 button {
+.menu2-button {
     background: none;
     border: none;
+    height: 100%;
+    width: 10%;
 }
 
 /* FIM SIDEBAR */
@@ -164,6 +176,8 @@ body {
     flex-direction: row;
     /* justify-content: center; */
     margin-bottom: 1px;
+    width: 98%;
+    /* background-color: #5124cc; */
 }
 
 .message {
@@ -171,8 +185,10 @@ body {
     padding: 10px;
     margin-bottom: 0;
     position: relative;
-    background-color: #3ad4f0;
+    background-color: #5124cc;
     border-radius: 20px;
+    max-width: 50%;
+    word-break: break-all;
 }
 
 /* FIM MENSAGENS */
